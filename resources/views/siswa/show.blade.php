@@ -24,8 +24,8 @@
         </tr>
     </table>
 
-    <a href="{{ route('siswa.edit', $siswa->id) }}" class="btn btn-primary">Edit</a>
-    <form action="{{ route('siswa.destroy', $siswa->id) }}" method="POST" class="d-inline">
+    <a href="{{ route('siswa.edit', $siswa->user_id) }}" class="btn btn-primary">Edit</a>
+    <form action="{{ route('siswa.destroy', $siswa->user_id) }}" method="POST" class="d-inline">
         @csrf
         @method('DELETE')
         <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus siswa ini?')">Hapus</button>

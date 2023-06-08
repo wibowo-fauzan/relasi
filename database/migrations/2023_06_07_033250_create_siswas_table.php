@@ -12,12 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('siswas', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('kelas_id');
             $table->string('nama');
             $table->string('nisn')->unique();
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('kelas_id')->references('id')->on('kelas')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
+
         });
     }
 

@@ -429,8 +429,39 @@
         <!-- partial:partials/_footer.html -->
         <div class="container mt-4">
           <div class="d-flex justify-content-between align-items-center">
-              <h3>Akun Admin</h3>
+              <h3>Akun Siswa</h3>
               <a href="{{ route('user.create') }}" class="btn btn-primary">Tambahkan Akun +</a>
+          </div>
+          <table class="table mt-3">
+              <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Name</th>
+                      <th>NISN</th>
+                      <th>Tempat Lahir</th>
+                      <th>Tempat Lahir</th>
+                      <th>history create</th>
+                      <th>history update</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  @foreach($siswas as $oop)
+                  <tr>
+                      <td>{{ $oop->user_id }}</td>
+                      <td>{{ $oop->nama }}</td>
+                      <td>{{ $oop->nisn }}</td>
+                      <td>{{ $oop->tempat_lahir }}</td>
+                      <td>{{ $oop->tanggal_lahir }}</td>
+                      <td>{{ $oop->created_at }}</td>
+                      <td>{{ $oop->updated_at }}</td>
+                  </tr>
+                  @endforeach
+              </tbody>
+          </table>
+      </div>
+        <div class="container mt-4">
+          <div class="d-flex justify-content-between align-items-center">
+              <h3>Akun Admin</h3>
           </div>
           <table class="table mt-3">
               <thead>
@@ -510,6 +541,7 @@
                     </tbody>
                 </table>
             </div>
+            <div class="container">
               <div class="container mt-4">
                   <div class="d-flex justify-content-between align-items-center">
                       <h3>Akun Murid</h3>
@@ -536,7 +568,7 @@
                           @endforeach
                       </tbody>
                   </table>
-              </div>
+              </div> --}}
       </div>
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
