@@ -339,7 +339,7 @@
           </li>
           <div class="collapse" id="tables">
             <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="pages/tables/guru-table.html">Data Walikelas</a></li>
+              <li class="nav-item"> <a class="nav-link" href="/wali-kelas">Data Walikelas</a></li>
             </ul>
           </div>
           <div class="collapse" id="tables">
@@ -455,7 +455,6 @@
               </tbody>
           </table>
       </div>
-        <div class="container">
           <div class="container mt-4">
               <div class="d-flex justify-content-between align-items-center">
                   <h3>Akun Guru</h3>
@@ -484,7 +483,6 @@
                   </tbody>
               </table>
           </div>
-          <div class="container">
             <div class="container mt-4">
                 <div class="d-flex justify-content-between align-items-center">
                     <h3>Akun Walikelas</h3>
@@ -512,7 +510,6 @@
                     </tbody>
                 </table>
             </div>
-            <div class="container">
               <div class="container mt-4">
                   <div class="d-flex justify-content-between align-items-center">
                       <h3>Akun Murid</h3>
