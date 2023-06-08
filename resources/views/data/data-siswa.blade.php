@@ -5,7 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Skydash Admin</title>
+    <title>Data Siswa</title>
+    <link href="{{ asset('FlexStart/assets/img/loggo.png') }}" rel="icon">
     <!-- plugins:css -->
   <link rel="stylesheet" href="{{asset ('vendor/feather/feather.css') }}">
   <link rel="stylesheet" href="{{ asset ('vendor/ti-icons/css/themify-icons.css') }}">
@@ -19,7 +20,8 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="{{ asset('template/css/style.css') }}">
   <!-- endinject -->
-  <link rel="shortcut icon" href="{{asset('images/favicon.png')}}" />
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="{{ asset('skydash/style.css') }}">
 </head>
 
 <body>
@@ -27,12 +29,10 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo mr-20" style="transform: scale(2);" href="index.html"><img
-                        src="images/logo.png" class="mr-19" alt="logo" />
+                <a class="navbar-brand brand-logo mr-5" style="transform: scale(1.1);" href="index.html"><img src="{{ asset('skydash/images/starling.png') }}" class="mr-1" alt="logo"/>
                 </a>
-                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg"
-                        alt="logo" /></a>
-            </div>
+                <a class="navbar-brand brand-logo-mini" href="index.html" ><img src="{{ asset('skydash/images/loggo.png') }}" alt="logo"/></a>
+              </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                 <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                     <span class="icon-menu"></span>
@@ -103,8 +103,8 @@
                     </li>
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                            <img src="images/faces/face28.jpg" alt="profile" />
-                        </a>
+                            <img src="{{ asset('skydash/images/faces/face28.jpg') }}" alt="profile"/>
+                          </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
                             aria-labelledby="profileDropdown">
                             <a class="dropdown-item">
@@ -129,11 +129,11 @@
                             </a> --}}
                         </div>
                     </li>
-                    <li class="nav-item nav-settings d-none d-lg-flex">
+                    {{-- <li class="nav-item nav-settings d-none d-lg-flex">
                         <a class="nav-link" href="#">
                             <i class="icon-ellipsis"></i>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
                 <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
                     data-toggle="offcanvas">

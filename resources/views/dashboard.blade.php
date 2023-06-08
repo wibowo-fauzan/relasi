@@ -5,7 +5,8 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Skydash Admin</title>
+  <title>StarLing Admin</title>
+  <link href="{{ asset('FlexStart/assets/img/loggo.png') }}" rel="icon">
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendor/feather/feather.css">
   <link rel="stylesheet" href="vendor/ti-icons/css/themify-icons.css">
@@ -20,15 +21,16 @@
   <link rel="stylesheet" href="template/css/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="{{ asset('skydash/style.css') }}">
 </head>
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-20" style="transform: scale(2);" href="index.html"><img src="images/logo.png" class="mr-19" alt="logo"/>
+        <a class="navbar-brand brand-logo mr-5" style="transform: scale(1.1);" href="index.html"><img src="{{ asset('skydash/images/starling.png') }}" class="mr-1" alt="logo"/>
         </a>
-        <a class="navbar-brand brand-logo-mini" href="index.html" ><img src="images/logo-mini.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html" ><img src="{{ asset('skydash/images/loggo.png') }}" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -97,7 +99,7 @@
           </li>
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="images/faces/face28.jpg" alt="profile"/>
+              <img src="{{ asset('skydash/images/faces/face28.jpg') }}" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item">
@@ -115,17 +117,21 @@
                            </form>
               @endif
               @endauth
+              <a class="dropdown-item" href="/">
+                <i class="ti-close "></i>
+                Return
+              </a>
               {{-- <a class="dropdown-item" href="{{ route('logout') }}">
                 <i class="ti-power-off text-primary"></i>
                 Logout
               </a> --}}
             </div>
           </li>
-          <li class="nav-item nav-settings d-none d-lg-flex">
+          {{-- <li class="nav-item nav-settings d-none d-lg-flex">
             <a class="nav-link" href="#">
               <i class="icon-ellipsis"></i>
             </a>
-          </li>
+          </li> --}}
         </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
           <span class="icon-menu"></span>
@@ -314,7 +320,7 @@
             </a>
           </li>
          
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
               <i class="icon-columns menu-icon"></i>
               <span class="menu-title">Form elements</span>
@@ -325,6 +331,7 @@
                 <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
               </ul>
             </div>
+          </li> --}}
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
               <i class="icon-grid-2 menu-icon"></i>
@@ -366,12 +373,15 @@
             <div class="col-md-12 grid-margin">
               <div class="row">
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                    @auth
-                    @if(auth()->user())
-                  <h3 class="font-weight-bold">{{ auth()->user()->username }}</h3>
-                  @endif
-                  @endauth
-                </div>
+                  @auth
+                  @if(auth()->user())
+                <h3 class="font-weight-bold"> Welcome {{ auth()->user()->username }}</h3>
+                @endif
+                @if(auth()->user())
+                <h6 class="font-weight-normal mb-0">{{ auth()->user()->role }} <span class="text-primary">StarLing</span></h6>
+                @endif
+                 @endauth
+              </div>
               </div>
             </div>
           </div>
@@ -379,23 +389,25 @@
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card tale-bg">
                 <div class="card-people mt-auto">
-                  <img src="images/dashboard/people.svg" alt="people">
+                  <img src="{{ asset('skydash/images/bk.png') }}" alt="people">
                 </div>
               </div>
             </div>
             <div class="col-md-6 grid-margin transparent">
               <div class="row">
                 <div class="col-md-6 mb-4 stretch-card transparent">
-                  <div class="card card-tale">
-                    <div class="card-body">
+                  <div class="card card-tale-white">
+                    <div class="card-body" style="box-shadow: 0px 3px 30px 0px rgba(0, 0, 0, 0.06);
+                    ">
                       <p class="mb-4">Jumlah Admin</p>
                       <p class="fs-30 mb-2">{{ $admin->count() }}</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4 stretch-card transparent">
-                  <div class="card card-dark-blue">
-                    <div class="card-body">
+                  <div class="card card-dark-white">
+                    <div class="card-body" style="box-shadow: 0px 3px 30px 0px rgba(0, 0, 0, 0.06);
+                    ">
                       <p class="mb-4">Jumlah Siswa</p>
                       <p class="fs-30 mb-2">{{ $murid->count() }}</p>
                     </div>
@@ -404,17 +416,19 @@
               </div>
               <div class="row">
                 <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                  <div class="card card-light-blue">
-                    <div class="card-body">
-                      <p class="mb-4">Jumlah Walikelas</p>
+                  <div class="card card-light-white">
+                    <div class="card-body" style="box-shadow: 0px 3px 30px 0px rgba(0, 0, 0, 0.06);
+                    ">
+                      <p class="mb-4">Jumlah Wali kelas</p>
                       <p class="fs-30 mb-2">{{ $walikelas->count() }}</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 stretch-card transparent">
-                  <div class="card card-light-danger">
-                    <div class="card-body">
-                      <p class="mb-4">Jumlah Guru Bimbingan Konsneling</p>
+                  <div class="card card-light-white">
+                    <div class="card-body" style="box-shadow: 0px 3px 30px 0px rgba(0, 0, 0, 0.06);
+                    ">
+                      <p class="mb-4">Jumlah Guru BK</p>
                       <p class="fs-30 mb-2">{{ $gurubk->count() }}</p>
                     </div>
                   </div>

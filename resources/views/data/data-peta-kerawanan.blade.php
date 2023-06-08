@@ -5,7 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Skydash Admin</title>
+    <title>Data Peta Kerawanan</title>
+    <link href="{{ asset('FlexStart/assets/img/loggo.png') }}" rel="icon">
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset ('vendor/feather/feather.css') }}">
     <link rel="stylesheet" href="{{ asset ('vendor/ti-icons/css/themify-icons.css') }}">
@@ -21,7 +22,8 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="{{ asset('template/css/style.css') }}">
     <!-- endinject -->
-    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="{{ asset('skydash/style.css') }}">
 </head>
 
 <body>
@@ -131,11 +133,11 @@
                             </a> --}}
                         </div>
                     </li>
-                    <li class="nav-item nav-settings d-none d-lg-flex">
+                    {{-- <li class="nav-item nav-settings d-none d-lg-flex">
                         <a class="nav-link" href="#">
                             <i class="icon-ellipsis"></i>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
                 <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
                     data-toggle="offcanvas">
