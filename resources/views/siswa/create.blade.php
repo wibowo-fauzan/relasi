@@ -26,12 +26,28 @@
             <input type="number" name="nisn" id="nisn" class="form-control" required>
         </div>
         <div class="form-group">
+            <select name="kelas_id" id="kelas">
+                <option value="">Kelas</option>
+                @foreach ($kelas as $oop)
+                <option value="{{ $oop->id }}">{{ $oop->nama }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group">
             <label for="tempat_lahir">Tempat Lahir</label>
             <input type="text" name="tempat_lahir" id="tempat_lahir" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="tanggal_lahir">Tanggal Lahir</label>
             <input type="date" name="tanggal_lahir" id="tanggal_lahir" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" required>
         </div>
         <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
