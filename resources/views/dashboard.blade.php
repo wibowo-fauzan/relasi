@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="template/css/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
   <div class="container-scroller">
@@ -119,6 +120,10 @@
                 <i class="ti-power-off text-primary"></i>
                 Logout
               </a> --}}
+              <a class="dropdown-item" href="/">
+                <i class="ti-close "></i>
+                Return
+              </a>
             </div>
           </li>
           <li class="nav-item nav-settings d-none d-lg-flex">
@@ -339,7 +344,7 @@
           </li>
           <div class="collapse" id="tables">
             <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="pages/tables/guru-table.html">Data Walikelas</a></li>
+              <li class="nav-item"> <a class="nav-link" href="/wali-kelas">Data Walikelas</a></li>
             </ul>
           </div>
           <div class="collapse" id="tables">
@@ -455,7 +460,6 @@
               </tbody>
           </table>
       </div>
-        <div class="container">
           <div class="container mt-4">
               <div class="d-flex justify-content-between align-items-center">
                   <h3>Akun Guru</h3>
@@ -484,7 +488,6 @@
                   </tbody>
               </table>
           </div>
-          <div class="container">
             <div class="container mt-4">
                 <div class="d-flex justify-content-between align-items-center">
                     <h3>Akun Walikelas</h3>
@@ -512,7 +515,6 @@
                     </tbody>
                 </table>
             </div>
-            <div class="container">
               <div class="container mt-4">
                   <div class="d-flex justify-content-between align-items-center">
                       <h3>Akun Murid</h3>
