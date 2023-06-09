@@ -16,8 +16,9 @@ class DashboardAdminController extends Controller
     $gurubk = DB::table('users')->where('role', 'gurubk')->get();
     $walikelas = DB::table('users')->where('role', 'walikelas')->get();
     $murid = DB::table('users')->where('role', 'murid')->get();
+    $siswas = DB::table('siswas')->get();
 
-    return view('dashboard', compact('tittle', 'admin', 'gurubk', 'walikelas', 'murid'));
+    return view('dashboard', compact('tittle', 'admin', 'gurubk', 'walikelas', 'murid','siswas'));
 
 
 }

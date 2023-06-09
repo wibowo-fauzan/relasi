@@ -5,22 +5,24 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Data Siswa</title>
+    <title>Data Peta Kerawanan</title>
     <link href="{{ asset('FlexStart/assets/img/loggo.png') }}" rel="icon">
     <!-- plugins:css -->
-  <link rel="stylesheet" href="{{asset ('vendor/feather/feather.css') }}">
-  <link rel="stylesheet" href="{{ asset ('vendor/ti-icons/css/themify-icons.css') }}">
-  <link rel="stylesheet" href="{{ asset ('vendor/css/vendor.bundle.base.css') }}">
-  <!-- endinject -->
-  <!-- Plugin css for this page -->
-  <link rel="stylesheet" href="{{ asset ('vendor/datatables.net-bs4/dataTables.bootstrap4.css') }}">
-  <link rel="stylesheet" href="{{ asset ('vendor/ti-icons/css/themify-icons.css') }}">
-  <link rel="stylesheet" type="text/css" href="{{ asset ('template/js/select.dataTables.min.css') }}">
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="{{ asset('template/css/style.css') }}">
-  <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="{{ asset ('vendor/feather/feather.css') }}">
+    <link rel="stylesheet" href="{{ asset ('vendor/ti-icons/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset ('vendor/css/vendor.bundle.base.css') }}">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet"
+        href="{{ asset ('vendor/datatables.net-bs4/dataTables.bootstrap4.css') }}">
+    <link rel="stylesheet" href="{{ asset ('vendor/ti-icons/css/themify-icons.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset ('template/js/select.dataTables.min.css') }}">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="{{ asset('template/css/style.css') }}">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="images/favicon.png" />
   <link rel="stylesheet" href="{{ asset('skydash/style.css') }}">
 </head>
 
@@ -29,10 +31,12 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo mr-5" style="transform: scale(1.1);" href="index.html"><img src="{{ asset('skydash/images/starling.png') }}" class="mr-1" alt="logo"/>
+                <a class="navbar-brand brand-logo mr-20" style="transform: scale(2);" href="index.html"><img
+                        src="images/logo.png" class="mr-19" alt="logo" />
                 </a>
-                <a class="navbar-brand brand-logo-mini" href="index.html" ><img src="{{ asset('skydash/images/loggo.png') }}" alt="logo"/></a>
-              </div>
+                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg"
+                        alt="logo" /></a>
+            </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                 <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                     <span class="icon-menu"></span>
@@ -103,8 +107,8 @@
                     </li>
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                            <img src="{{ asset('skydash/images/faces/face28.jpg') }}" alt="profile"/>
-                          </a>
+                            <img src="images/faces/face28.jpg" alt="profile" />
+                        </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
                             aria-labelledby="profileDropdown">
                             <a class="dropdown-item">
@@ -331,64 +335,63 @@
             <!-- partial -->
             <!-- partial:partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
-                <ul class="nav">
-                    <li class="nav-item">
-                      <a class="nav-link" href="/dashboard">
-                        <i class="icon-grid menu-icon"></i>
-                        <span class="/dashboard">Dashboard</span>
-                      </a>
-                    </li>
-                   
-                    <li class="nav-item">
-                      <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-                        <i class="icon-columns menu-icon"></i>
-                        <span class="menu-title">Form elements</span>
-                        <i class="menu-arrow"></i>
-                      </a>
-                      <div class="collapse" id="form-elements">
-                        <ul class="nav flex-column sub-menu">
-                          <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
-                        </ul>
-                      </div>
-                    <li class="nav-item">
-                      <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-                        <i class="icon-grid-2 menu-icon"></i>
-                        <span class="menu-title">Tables</span>
-                        <i class="menu-arrow"></i>
-                      </a>
-                      <div class="collapse" id="tables">
-                        <ul class="nav flex-column sub-menu">
-                          <li class="nav-item"> <a class="nav-link" href="/siswa">Data Siswa</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                    <div class="collapse" id="tables">
-                      <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"> <a class="nav-link" href="/wali-kelas">Data Walikelas</a></li>
-                      </ul>
-                    </div>
-                    <div class="collapse" id="tables">
-                      <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"> <a class="nav-link" href="/gurubk">Data Guru Bk</a></li>
-                      </ul>
-                    </div>
-                    <div class="collapse" id="tables">
-                      <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"> <a class="nav-link" href="/kelas">Data Kelas</a></li>
-                      </ul>
-                    </div>
-                    <div class="collapse" id="tables">
-                        <ul class="nav flex-column sub-menu">
-                          <li class="nav-item"> <a class="nav-link" href="/users">Create Akun</a></li>
-                        </ul>
-                      </div>
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/dashboard">
+                    <i class="icon-grid menu-icon"></i>
+                    <span class="/dashboard">Dashboard</span>
+                  </a>
+                </li>
+               
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+                    <i class="icon-columns menu-icon"></i>
+                    <span class="menu-title">Form elements</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="collapse" id="form-elements">
+                    <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
+                    </ul>
+                  </div>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+                    <i class="icon-grid-2 menu-icon"></i>
+                    <span class="menu-title">Tables</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="collapse" id="tables">
+                    <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"> <a class="nav-link" href="/siswa">Data Siswa</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <div class="collapse" id="tables">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="/wali-kelas">Data Walikelas</a></li>
                   </ul>
+                </div>
+                <div class="collapse" id="tables">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="/gurubk">Data Guru Bk</a></li>
+                  </ul>
+                </div>
+                <div class="collapse" id="tables">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="/kelas">Data Kelas</a></li>
+                  </ul>
+                </div>
+                <div class="collapse" id="tables">
+                    <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"> <a class="nav-link" href="/users">Create Akun</a></li>
+                    </ul>
+                  </div>
+              </ul>
             </nav>
             <!-- partial -->
-            {{-- Content nya --}}
             <div class="main-panel">
                 <div class="content-wrapper">
-                    @yield('siswa')
+                    @yield('')
                 </div>
                 <!-- content-wrapper ends -->
                 <!-- partial:partials/_footer.html -->
@@ -403,10 +406,11 @@
                     </div>
                 </footer>
             </div>
-                <!-- partial -->
-            <!-- main-panel ends -->
+            <!-- partial -->
         </div>
-        <!-- page-body-wrapper ends -->
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
 
